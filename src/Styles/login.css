@@ -1,0 +1,63 @@
+/* src/pages/Login.css */
+.login-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .login-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1a73e8; /* Un color que evoque confianza, puedes cambiarlo */
+  }
+  
+  .login-subtitle {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  form label {
+    font-weight: bold;
+  }
+  
+  form input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  form button {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #0056b3;
+  }
+
+.logo-img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+    
