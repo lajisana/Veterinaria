@@ -1,54 +1,40 @@
-# React + TypeScript + Vite
+# 🐾 Veterinaria - Agenda de Citas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una aplicación web desarrollada con **React**, **Vite**, y **React Router** que permite gestionar la agenda de citas de una veterinaria. Los usuarios pueden registrar mascotas, ver sus detalles y programar citas de atención médica.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologías utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [React Router](https://reactrouter.com/)
+- [NPM](https://www.npmjs.com/)
+- [CSS Modules / Tailwind / Styled Components] *(especifica si usas alguno)*
 
-## Expanding the ESLint configuration
+## 📂 Estructura del proyecto
+├── components/ # Componentes reutilizables (Formulario, ListaCitas, etc.)
+├── pages/ # Páginas de navegación (Home, Citas, Mascotas)
+├── routes/ # Configuración de rutas con React Router
+├── assets/ # Imágenes y recursos estáticos
+├── App.jsx # Componente principal
+└── main.jsx # Punto de entrada
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🧩 Funcionalidades principales
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- 🐶 Registro de mascotas con datos como nombre, especie, raza y dueño.
+- 📅 Agendamiento de citas veterinarias.
+- 🔍 Visualización y edición de citas.
+- 🗑️ Eliminación de citas pasadas.
+- 📱 Diseño responsivo para uso en móviles.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## ▶️ Instalación y ejecución
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. **Clona el repositorio:**
+   ```bash
+   git clone https://github.com/tuusuario/veterinaria-citas.git
+   cd veterinaria-citas
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+instala dependencias
+npm install
+
+inicia el servidor 
+npm run dev

@@ -1,0 +1,97 @@
+.veterinario-page {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+  }
+  
+  .header-veterinario {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .header-veterinario h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+  }
+  
+  .header-veterinario p {
+    color: #7f8c8d;
+    font-size: 1.2rem;
+  }
+  
+  .citas-section {
+    margin-bottom: 30px;
+  }
+  
+  .citas-section h3 {
+    font-size: 1.5rem;
+    color: #2980b9;
+    margin-bottom: 15px;
+  }
+  
+  .citas-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .cita-item {
+    background-color: #fff;
+    border: 1px solid #ecf0f1;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 15px;
+    transition: background-color 0.3s;
+  }
+  
+  .cita-item:hover {
+    background-color: #ecf0f1;
+  }
+  
+  .cita-details h4 {
+    font-size: 1.2rem;
+    color: #34495e;
+  }
+  
+  .cita-details p {
+    color: #95a5a6;
+    font-size: 1rem;
+  }
+  
+  .actions-section {
+    text-align: center;
+  }
+  
+  .actions-section h3 {
+    font-size: 1.5rem;
+    color: #2980b9;
+    margin-bottom: 20px;
+  }
+  
+  .actions-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .action-btn {
+    padding: 12px 25px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .action-btn:hover {
+    background-color: #2980b9;
+  }
+  
+  @media (max-width: 768px) {
+    .actions-buttons {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+  

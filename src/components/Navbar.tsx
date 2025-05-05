@@ -1,19 +1,36 @@
-
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom'; // 👈 añade useNavigate
 import { useAuth } from '../context/Context';
 import '../Styles/navbar.css';
 
 export default function Navbar() {
   const { isAuthenticated, logout, user } = useAuth();
+  const navigate = useNavigate(); // 👈 inicializa navigate
+
+  const handleLogout = () => {
+    logout();              // Limpia sesión
+    navigate('/login');    // Redirige al login
+  };
 
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <h1>Veterinaria Salud Animal</h1> {/* Aquí puedes poner el logo si tienes */}
+        <h1>Veterinaria Salud Animal</h1> 
       </div>
       <ul className="navbar-links">
         <li>
-          <Link to="/">Inicio</Link>
+      <li>
+  <Link to={
+    isAuthenticated
+      ? user?.rol === 'veterinario'
+        ? '/veterinario'
+        : '/dueno'
+      : '/login'
+  }>
+    Inicio
+  </Link>
+</li>
+
+
         </li>
         {isAuthenticated ? (
           <>
@@ -23,12 +40,6 @@ export default function Navbar() {
             <li>
               <Link to="/historial">Historial</Link>
             </li>
-            <li>
-              <Link to="/mascotas">Mascotas</Link>
-            </li>
-            <li>
-              <Link to="/mascotas-por-dueno">Por Dueño</Link>
-            </li>
             {user?.rol === 'veterinario' && (
               <li>
                 <Link to="/mascotas">Mascotas</Link>
@@ -36,11 +47,11 @@ export default function Navbar() {
             )}
             {user?.rol === 'dueño' && (
               <li>
-                <Link to="/mascotas-por-dueno">Mis Mascotas</Link>
+                <Link to="/mismascotas">Mis Mascotas</Link>
               </li>
             )}
             <li>
-              <button onClick={logout}>Cerrar sesión</button>
+              <button onClick={handleLogout}>Cerrar sesión</button> {/* 👈 usa handleLogout */}
             </li>
           </>
         ) : (

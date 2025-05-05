@@ -1,8 +1,9 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 type User = { 
-  email: string ;
-  rol:'dueño' | 'veterinario';
+  email: string;
+  nombre: string;
+  rol: 'dueño' | 'veterinario';
 };
 
 type AuthContextType = {

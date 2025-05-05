@@ -1,4 +1,3 @@
-
 import { useState, FormEvent } from 'react';
 import { useAuth } from '../context/Context';
 import { useNavigate } from 'react-router-dom';
@@ -9,21 +8,22 @@ export default function LoginForm() {
   const { login } = useAuth();
   const navigate = useNavigate();
 
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
+ 
+    const handleSubmit = (e: FormEvent) => {
+      e.preventDefault();
+    
 
-    // Ejemplo simple de validación de credenciales
-    if (email === 'admin@test.com' && password === '1234') {
-      login({ email, rol: 'veterinario' }); // Asumiendo rol 'veterinario'
-      navigate('/');
-    } else if (email === 'dueno@test.com' && password === '1234') {
-      login({ email, rol: 'dueño' }); // Asumiendo rol 'dueño'
-      navigate('/');
-    } else {
-      alert('Credenciales inválidas');
-    }
-  };
-
+      if (email === 'admin@example.com' && password === '1234') {
+        login({ email, nombre: 'Admin', rol: 'veterinario' }); // Asumiendo rol 'veterinario'
+        navigate('/veterinario'); // Redirigir al veterinario
+      } else if (email === 'laura@example.com' && password === '1234') {
+        login({ email, nombre: 'Laura', rol: 'dueño' }); // Asumiendo rol 'dueño'
+        navigate('/dueno'); // Redirigir al dueño de mascota
+      } else {
+        alert('Credenciales inválidas');
+      }
+    };
+    
   return (
     <form onSubmit={handleSubmit}>
       <div>
