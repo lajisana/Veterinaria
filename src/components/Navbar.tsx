@@ -17,7 +17,7 @@ export default function Navbar() {
         <h1>Veterinaria Salud Animal</h1> 
       </div>
       <ul className="navbar-links">
-        <li>
+        
       <li>
   <Link to={
     isAuthenticated
@@ -31,7 +31,7 @@ export default function Navbar() {
 </li>
 
 
-        </li>
+        
         {isAuthenticated ? (
           <>
             <li>

@@ -1,11 +1,10 @@
-// src/pages/Dueno.tsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 export default function Dueno() {
   return (
     <div className="dueno-page">
       <header>
-        <h2>Bienvenido, DUEÑO de mascota</h2>
+        <h2>Bienvenido a nuestra plataforma de atención veterinaria</h2>
         <p>
           En este sistema podrás llevar el control y cuidado de tus mascotas de forma sencilla.
         </p>
