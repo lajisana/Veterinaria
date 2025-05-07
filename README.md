@@ -28,11 +28,6 @@ Este proyecto es una aplicación web desarrollada con **React**, **Vite**, y **R
 
 ## ▶️ Instalación y ejecución
 
-1. **Clona el repositorio:**
-   ```bash
-   git clone https://github.com/tuusuario/veterinaria-citas.git
-   cd veterinaria-citas
-
 instala dependencias
 npm install
 
